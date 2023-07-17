@@ -123,7 +123,8 @@ export const updateUser = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
     
-    // Hash the updated password
+       // Hash the updated password - untested when deployed, works in thunderclient, before it was just:
+    // const updatedHash = await bcrypt.hash(password, 10); and updatedHash on line 135
     if (password) {
       const updatedHash = await bcrypt.hash(password, 10);
       updatedUser.password = updatedHash;

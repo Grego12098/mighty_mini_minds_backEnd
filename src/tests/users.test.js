@@ -115,7 +115,7 @@ describe("Users", () => {
           chai.request(app)
               .patch(`/users/${uuid}`)
               .send({
-                  name: "Jimmy Sloe",
+                  name: "Jimmy Sloe for sho",
                   username: "jimmysloe",
                   password: "123",
                   contact_email: "john.doe2@example.com",
